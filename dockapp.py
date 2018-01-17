@@ -15,7 +15,11 @@ subprocess.call('echo "DB_URL=\'mongodb://localhost:27017/test\'" >> .env', shel
 
 subprocess.call('docker build -t user-manager .', shell=True)
 
-subprocess.call('docker run -d -p 3000:3000 user-manager', shell=True)
+# subprocess.call('docker run -d -p 3000:3000 user-manager', shell=True)
+
+subprocess.call('docker-compose build', shell=True)
+subprocess.call('docker-compose up')
+
 
 print 'open http://localhost:3000/ in your browser to access application'
 print ''
