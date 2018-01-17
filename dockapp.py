@@ -18,3 +18,4 @@ subprocess.call('docker build -t user-manager .', shell=True)
 subprocess.call('docker run -d -p 3000:3000 user-manager', shell=True)
 
 print 'open http://localhost:3000/ in your browser to access application'
+print ''
